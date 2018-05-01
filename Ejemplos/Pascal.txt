@@ -1,0 +1,88 @@
+
+Pascal(N){
+	Si N=1, retornar 1
+	Si N=2, retornar 1 1
+	else{
+	
+		lant=Pascal(N-1);
+		lista= new;
+		lista.add(1);
+		para(i=0;i<lant.tamaño(-2);i++){
+	     		lista.add(lant(i)+lant(i+1))
+		
+		}
+		lista.add(1);
+		return lista;
+	    
+
+}
+
+
+FUNCION PASCAL(N)
+
+SI N=1, retornar 1
+L=Pascal(N-1)
+L1=[0 L]
+L2=[L 0]
+RETORNAR L1+L2
+
+COMO MANEJA LISTAS OZ
+
+DECLARE
+H=1
+T=[2 3 4 5]
+{BROWSE H|T} %[1 2 3 4 5]
+
+
+
+
+%MOZART Ejemplo 1
+
+declare
+H=1
+T=[2 3 4 5]
+{Browse H|T}
+
+%Ejemplo 2
+
+declare
+fun{Pascal N} 
+   if N == 1 then
+	[1]
+   else
+	{AddList
+ 	  {ShiftLeft {Pascal N-1}}
+          {ShiftRight {Pascal N-1}
+
+	}
+   end
+end
+
+fun {ShiftRight L} 0|L end 
+
+fun {ShiftLeft L} 
+	case L of H|T then
+  		H|(ShiftLeft T)
+	else
+		[0]
+	end
+end
+
+
+fun {AddList L1 L2}
+	case L1 of H1|T1 then
+		case L2 of H2|T2 then
+			H1+H2| {AddList T1 T2}
+		end
+	else 
+		nil
+	end
+end
+
+{Browse {Pascal 29}}
+
+
+
+
+
+

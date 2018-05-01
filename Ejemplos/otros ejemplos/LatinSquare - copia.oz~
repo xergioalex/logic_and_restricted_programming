@@ -1,0 +1,22 @@
+%LatinSquare para una matriz 3x3
+%ABC
+%DEF
+%GHI
+declare
+proc {LatinSquare Sol }
+    sol(a:A b:B c:C d:D e:E f:F g:G h:H i:I)= Sol
+in
+ 
+   %Dominio
+   Sol ::: 0#9
+   
+   % Restriciones
+   A+B+C+D+E+F+G+H+I =:10
+   0*A+1*B+2*C+
+
+   
+   %Distribucion
+   {FD.distribute ff Sol}
+end
+
+{ExploreAll LatinSquare}
